@@ -1,0 +1,13 @@
+---
+const { count, title, sub } = Astro.props
+---
+
+<div class="animate text-center border border-dashed border-1 border border-main rounded-full py-3">
+    <h2 class="text-xl leading-tight font-serif font-medium sm:text-2xl">
+        {count}
+    </h2>
+    <h2 class="text-xl leading-tight font-serif font-medium sm:text-2xl">
+        {title}
+    </h2>
+     <p class="text-md">{sub}</p>
+</div>
