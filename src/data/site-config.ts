@@ -23,6 +23,19 @@ export type Subscribe = {
     formUrl: string;
 };
 
+export type TMp3Example = {
+    title: string;
+    src: string;
+    isFeatured?: boolean;
+    position: number;
+};
+
+export type TReviews = {
+    name: string;
+    text: string;
+    event: string;
+};
+
 export type SiteConfig = {
     logo?: Image;
     title: string;
@@ -37,6 +50,8 @@ export type SiteConfig = {
     postsPerPage?: number;
     projectsPerPage?: number;
     repertoar: string[];
+    mp3Example: TMp3Example[];
+    reviews: TReviews[];
 };
 
 const siteConfig: SiteConfig = {
@@ -44,7 +59,7 @@ const siteConfig: SiteConfig = {
     subtitle: 'Hudební skupina',
     description: 'HUDBA NA SVATBU, OSLAVU, ZÁBAVU, FIREMNÍ AKCI, SILVESTRA A JINOU PŘÍLEŽITOST NOVĚ TAKÉ PRO DĚTI...',
     image: {
-        src: '/dante-preview.jpg',
+        src: '/heroPhoto.jpeg',
         alt: 'Dante - Astro.js and Tailwind CSS theme'
     },
     headerNavLinks: [
@@ -61,40 +76,32 @@ const siteConfig: SiteConfig = {
             href: '/repertoar'
         },
         {
-            text: 'Tags',
-            href: '/tags'
+            text: 'Recenze',
+            href: '/reviews'
         }
     ],
     footerNavLinks: [
         {
-            text: 'About',
+            text: 'O nás',
             href: '/about'
         },
         {
-            text: 'Contact',
+            text: 'Kontakt',
             href: '/contact'
-        },
-        {
-            text: 'Terms',
-            href: '/terms'
-        },
-        {
-            text: 'Download theme',
-            href: 'https://github.com/JustGoodUI/dante-astro-theme'
         }
     ],
     socialLinks: [
         {
-            text: 'Dribbble',
-            href: 'https://dribbble.com/'
-        },
-        {
             text: 'Instagram',
-            href: 'https://instagram.com/'
+            href: 'https://www.instagram.com/alesaveronika/'
         },
         {
-            text: 'X/Twitter',
-            href: 'https://twitter.com/'
+            text: 'Youtube',
+            href: 'https://www.youtube.com/playlist?list=PLe_pw0K1R2FaO5lll5gdzcuIBfBhMbCIy'
+        },
+        {
+            text: 'Facebook',
+            href: 'https://www.facebook.com/profile.php?id=100063706474467'
         }
     ],
     hero: {
@@ -102,7 +109,7 @@ const siteConfig: SiteConfig = {
         subtitle: 'Hudební skupina',
         text: '<h2>HUDBA NA SVATBU, OSLAVU, ZÁBAVU, FIREMNÍ AKCI, SILVESTRA A JINOU PŘÍLEŽITOST NOVĚ TAKÉ PRO DĚTI...</h2> <h3>HRAJEME ČESKÉ A ZAHRANIČNÍ HITY - POP, ROCK, OLDIES, DECHOVKY</h3> <h4>Zpěv je doprovázen elektrickou kytarou a elektro-akustickou kytarou, na přání jsou možné klávesy s kladívkovou mechanikou. Jsme hudební skupina z Příbrami. Repertoár se skládá z českých a zahraničních skladeb různých stylů. Naše vystoupení je vhodné pro všechny věkové kategorie. Vystihujeme atmosféru a reagujeme na věk a náladu lidí.</h4>',
         image: {
-            src: '/heroPhoto.jpg',
+            src: '/heroPhoto.jpeg',
             alt: 'A person sitting at a desk in front of a computer'
         },
         actions: [
@@ -123,6 +130,84 @@ const siteConfig: SiteConfig = {
     },
     postsPerPage: 8,
     projectsPerPage: 8,
+    mp3Example: [
+        {
+            title: 'Fields of gold - Sting',
+            src: '/mp3/FieldsOfGold.mp3',
+            isFeatured: true,
+            position: 1
+        },
+        {
+            title: 'Amerika - Lucie',
+            src: '/mp3/Amerika.mp3',
+            isFeatured: true,
+            position: 2
+        },
+        {
+            title: 'Ai se eu te pego - Michel Teló',
+            src: '/mp3/AiSeEuTePego.mp3',
+            isFeatured: true,
+            position: 3
+        }
+    ],
+    reviews: [
+        { name: 'Kateřina', text: 'Super hudba na svatbu, skvělé písničky, super domluva a skvělá hudba. Moc děkujeme.', event: 'Svatba' },
+        {
+            name: 'Hynek',
+            text: 'Skvěle odehraná a odzpívaná "Zlatá svatba" na Litoměřicku. Parádně jsme si to užili 🙂. Musim jen doporučit a těším se na další setkání 👍',
+            event: 'Svatba'
+        },
+        {
+            name: 'Mirek',
+            text: 'Velice DĚKUJEME za úžasnou hudbu na naší svatbě, byl to neskutečný zážitek. Všichni jsme si to skvěle užili. Aleš a Veronika jsou velice příjemní a milí,neuvěřitelné duo.Za vše MOC DĚKUJÍ novomanželé Jochovi.',
+            event: 'Svatba'
+        },
+        {
+            name: 'Jarča',
+            text: 'Úžasné duo :) Skvělé písně, dokonale zazpívané. Usměvaví, milí a neuvěřitelně ochotní lidé :) Vykouzlili nám nádhernou svatební atmosféru :) děkujeme a těšíme se, že Vás zase někdy někde uvidíme :)',
+            event: 'Svatba'
+        },
+        {
+            name: 'Renata',
+            text: 'Velké poděkování Alešovi a Veronice za úžasnou atmosféru, kterou jste vytvořili krásný dětský den. Aleš a Veronika nám nádherně zpívali dětské písničky, tancovali, ale také přichystali soutěže pro děti. Moc vám děkujeme za super zábavu pro děti, ale i dospělé. Těšíme se na další společnou akci.',
+            event: 'Dětský den'
+        },
+        {
+            name: 'Tereza',
+            text: 'Aleš & Veronika nám hráli na svatbě a byli jsme všichni naprosto nadšení!!! Široký repertoár, milé vystupování, nádherný zpěv. Úžasně doladili atmosféru a mohu jen doporučit.',
+            event: 'Svatba'
+        },
+        {
+            name: 'Libuše',
+            text: 'Dekuji moc za zprijemneni oslavy narozenin. Super hudba, pristup, ochota, vstricnost. Rozhodne budu rada, kdyz si vas budu moci jeste poslechnout.',
+            event: 'Narozeniny'
+        },
+        {
+            name: 'Tomáš',
+            text: 'Chtěl bych Vám jménem společnosti a jménem všech zúčastněných poděkovat za super atmosféru, kterou jste svojí produkcí navodili. Děkuji za super profesionální přístup.',
+            event: 'Firemní akce'
+        },
+        {
+            name: 'Šárka',
+            text: 'Mili lide, prijemna atmosfera, bohaty repertoar! Tesim se na dalsi prilezitost k poslechu:) Muzeme s manzelem jen doporucit?',
+            event: 'Svatba'
+        },
+        {
+            name: 'Pepa',
+            text: 'Oslava narozenin super...diky vam jsem zapomnel na svuj vek...krasny den, dekuji',
+            event: 'Narozeniny'
+        },
+        {
+            name: 'Ivča',
+            text: 'Díky Vám, skvělé hudbě a atmosféře, kterou jste nám pomohli vytvořit, jsme zažili překrásnou svatbu na kterou budeme nejen my, ale všichni naši hosté vzpomínat :-) Mockrát děkujeme!',
+            event: 'Svatba'
+        },
+        {
+            name: 'Sofie',
+            text: 'Ja i manzel jsme byli velmi spokojeni:) Perfektni repertoar, skveli lide a prijemna atmosfera:) Muzeme jedine doporucit! Urcite se na ne jeste obratime pri dalsi vhodne prilezitosti:) Preji mnoho uspechu:)',
+            event: 'Svatba'
+        }
+    ],
     repertoar: [
         '05 a Radeček - Praha',
         '05 a Radeček (feat. Mária Čírová) - Vloupám se',

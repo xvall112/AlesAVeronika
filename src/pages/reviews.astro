@@ -1,0 +1,22 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import siteConfig from '../data/site-config';
+import Testimonials from '../components/Testimonials.astro';
+import type { TReviews } from '../data/site-config';
+
+const reviews = siteConfig.reviews;
+---
+
+<BaseLayout
+    title="Recenze"
+    description="Co o nás napsali"
+    image={{ src: '/dante-preview.jpg', alt: 'The preview of the site' }}
+    showHeader={false}
+>
+    <h1 class="mb-12 text-2xl leading-tight font-serif italic sm:mb-16 sm:text-4xl">Recenze</h1>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        {reviews.map(({name,text,event}: TReviews) => (
+            <Testimonials name={name}  text={text} event={event}/>
+        ))}
+          </div>
+</BaseLayout>

@@ -1,12 +1,8 @@
+---
+const { src, title } = Astro.props
+---
 
-<div class="flex items-center flex-col px-12 rounded-full w-full md:w-auto">
-    <h6 class="p-6">Title</h6> 
-    <audio controls src="/media/cc0-audio/t-rex-roar.mp3"></audio>
-    <!-- <audio id="audio-player" class="w-full"> 
-        <source src="/path-to-your-audio-file.mp3" type="audio/mpeg"> Your browser does not support the audio element. 
-    </audio>  -->
-</div> 
-<!-- <script> const audioPlayer = document.getElementById('audio-player'); 
-const playPauseButton = document.getElementById('play-pause'); 
-const seekBar = document.getElementById('seek-bar');
- playPauseButton.addEventListener('click', () => { if (audioPlayer.paused) { audioPlayer.play(); playPauseButton.textContent = 'Pause'; } else { audioPlayer.pause(); playPauseButton.textContent = 'Play'; } }); audioPlayer.addEventListener('timeupdate', () => { seekBar.value = (audioPlayer.currentTime / audioPlayer.duration) * 100; }); seekBar.addEventListener('input', () => { audioPlayer.currentTime = (seekBar.value / 100) * audioPlayer.duration; }); </script> -->
+<div class="flex items-center flex-col w-auto">
+    <h6 class="p-6">{title}</h6> 
+    <audio class="d-block  w-full border border-1 rounded-full border-main" controls src={src}></audio>
+</div>

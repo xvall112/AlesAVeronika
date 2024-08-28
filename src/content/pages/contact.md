@@ -1,14 +1,14 @@
 ---
-title: Get in touch
+title: Kontakt
 seo:
-  title: Contact
-  description: Get in touch through email or social media! Let me know how I can help.
+  title: Kontakt
+  description: Pošlete nezávaznou poptávku, obratem vás budem kontaktova. :-).
 ---
 
-Thank you for reaching out! Whether you have a question, a suggestion, or just want to share your thoughts, I'm all ears. Feel free to get in touch through any of the methods below:
+Napište nebo zavolejte o nezávaznou poptávku, obratem vás budem kontaktovat. :-)
 
-_Email:_
-Feel free to drop me an email at [example@example.com](mailto:example@example.com), and I'll do my best to respond as soon as possible.
+_Email:_ [alesaveronika@seznam.cz](mailto:alesaveronika@seznam.cz)
 
-_Social Media:_
-Connect with me on social media as well. Find me on [Twitter](https://twitter.com) or [LinkedIn](https://www.linkedin.com/).
+_Tel:_ [+420 774 080 983](tel:+420774080983)
+
+[Instagram](https://twitter.com) or [Youtube](https://www.linkedin.com/).

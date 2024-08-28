@@ -9,15 +9,25 @@ import siteConfig from '../data/site-config';
 import { sortItemsByDateDesc } from '../utils/data-utils';
 import Counter from '../components/Counter.astro';
 import AudioPlayer from '../components/AudioPlayer.astro';
+import Testimonials from '../components/Testimonials.astro';
+
+// type 
+import type { TMp3Example } from '../data/site-config';
+import type { TReview } from '../data/site-config';
 
 const posts = (await getCollection('blog')).sort(sortItemsByDateDesc);
 const featuredPosts = posts.filter(({ data }) => data.isFeatured);
 
 const projects = (await getCollection('projects')).sort(sortItemsByDateDesc);
 const featuredProjects = projects.filter(({ data }) => data.isFeatured);
+
+const {mp3Example, description, image, reviews} = siteConfig
+
+const heroReviews = reviews.slice(0, 6);
+const featuredMp3Example = mp3Example.filter(( data: TMp3Example ) => data.isFeatured).sort((a: TMp3Example, b: TMp3Example) => a.position - b.position);
 ---
 
-<BaseLayout showHeader={false} description={siteConfig.description} image={siteConfig.image}>
+<BaseLayout showHeader={false} description={description} image={image}>
     <Hero />
     {
         featuredProjects?.length > 0 && (
@@ -33,24 +43,38 @@ const featuredProjects = projects.filter(({ data }) => data.isFeatured);
         )
     }
     {
-        featuredPosts?.length > 0 && (
+        featuredMp3Example?.length > 0 && (
             <div class="mb-16 sm:mb-24">
                 <h2 class="mb-12 text-xl font-serif italic sm:mb-16 sm:text-2xl">Ukázky</h2>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                {featuredPosts.map((post) => (
-                    <AudioPlayer  />
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {featuredMp3Example.map((mp3Example) => (
+                    <AudioPlayer src={mp3Example.src} title={mp3Example.title} />
                 ))}
                   </div>
                 <div class="mt-12 sm:mt-16">
-                    <Button href="/blog">View All Posts</Button>
+                    <Button href="/blog">Chci slyšet více</Button>
                 </div>
             </div>
         )
     }
-     <div class="grid grid-cols-1 gap-12 sm:grid-cols-2 md:grid-cols-4">
-        <Counter count="10+" title="let" sub="hraní" />
-        <Counter count="100+" title="odehraných" sub="akcí" />
-        <Counter count="5000+" title="spokojených" sub="posluchačů" />
-        <Counter count="500+" title="písniček" sub="v repertoáru" />
-      </div>
+     <div class="mb-16 sm:mb-24">
+         <div class="grid grid-cols-1 gap-12 sm:grid-cols-2 md:grid-cols-4">
+             <Counter count="10+" title="let" sub="hraní" />
+             <Counter count="100+" title="odehraných" sub="akcí" />
+             <Counter count="5000+" title="spokojených" sub="posluchačů" />
+             <Counter count="500+" title="písniček" sub="v repertoáru" />
+        </div>
+    </div>
+            
+      <div class="mb-16 sm:mb-24">
+        <h2 class="mb-12 text-xl font-serif italic sm:mb-16 sm:text-2xl">Napsali o nás</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        {heroReviews.map(({name,text,event}: TReview) => (
+            <Testimonials name={name}  text={text} event={event}/>
+        ))}
+          </div>
+        <div class="mt-12 sm:mt-16">
+            <Button href="/reviews">Všechny recenze</Button>
+        </div>
+    </div>
 </BaseLayout>
