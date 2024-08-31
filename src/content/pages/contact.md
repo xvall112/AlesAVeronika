@@ -5,7 +5,7 @@ seo:
   description: Pošlete nezávaznou poptávku, obratem vás budem kontaktova. :-).
 ---
 
-Napište nebo zavolejte o nezávaznou poptávku, obratem vás budem kontaktovat. :-)
+Máte-li jakékoli dotazy nebo si přejete rezervovat termín, neváhejte nás kontaktovat:
 
 _Email:_ [alesaveronika@seznam.cz](mailto:alesaveronika@seznam.cz)
 

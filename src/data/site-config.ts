@@ -144,10 +144,16 @@ const siteConfig: SiteConfig = {
             position: 2
         },
         {
+            title: 'One - U2',
+            src: '/mp3/One.mp3',
+            isFeatured: true,
+            position: 3
+        },
+        {
             title: 'Ai se eu te pego - Michel Teló',
             src: '/mp3/AiSeEuTePego.mp3',
             isFeatured: true,
-            position: 3
+            position: 4
         }
     ],
     reviews: [
