@@ -16,10 +16,10 @@ import Pricing from '../components/Pricing.astro';
 import type { TMp3Example } from '../data/site-config';
 import type { TReview } from '../data/site-config';
 
-const posts = (await getCollection('blog')).sort(sortItemsByDateDesc);
-const featuredPosts = posts.filter(({ data }) => data.isFeatured);
+//const posts = (await getCollection('blog')).sort(sortItemsByDateDesc);
+//const featuredPosts = posts.filter(({ data }) => data.isFeatured);
 
-const projects = (await getCollection('event')).sort(sortItemsByDateDesc);
+const projects = (await getCollection('projects')).sort(sortItemsByDateDesc);
 const featuredProjects = projects.filter(({ data }) => data.isFeatured);
 
 const {mp3Example, description, image, reviews} = siteConfig
