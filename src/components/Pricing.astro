@@ -1,0 +1,36 @@
+---
+import Button from './Button.astro'
+---
+
+  <div class="flex w-full flex-col rounded-3xl  border-dashed border-1 border border-main px-6 py-20 lg:order-none">
+    <div class="text-center">
+      <h4 class="text-gray-400 text-lg font-medium">Cena</h4>
+      <p class="text-black my-3 text-4xl font-bold md:text-4xl">Dohodou</p>
+      <h4 class="text-gray-400 text-lg font-medium">Záleží na</h4>
+      <!-- {
+        plan.price.original && (
+          <p class="mt-1 text-xl font-medium text-gray-400 line-through md:text-2xl">
+            {plan.price.original}
+          </p>
+        )
+      } -->
+    </div>
+    <div class="mt-8 flex justify-center">
+      <ul class="my-8 grid gap-y-4 text-left">
+        <li class="text-gray-800 flex items-start gap-3">
+
+          <span class="text-xl">Délce hraní</span>
+        </li>
+        <li class="text-gray-800 flex items-start gap-3">
+
+          <span class="text-xl">Typu akce</span>
+        </li>
+        <li class="text-gray-800 flex items-start gap-3">
+
+          <span class="text-xl">Vzdálenosti</span>
+        </li>
+      </ul>
+    </div>
+    <Button href="/contact">Kontakt</Button>
+  </div>
+

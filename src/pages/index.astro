@@ -10,6 +10,7 @@ import { sortItemsByDateDesc } from '../utils/data-utils';
 import Counter from '../components/Counter.astro';
 import AudioPlayer from '../components/AudioPlayer.astro';
 import Testimonials from '../components/Testimonials.astro';
+import Pricing from '../components/Pricing.astro';
 
 // type 
 import type { TMp3Example } from '../data/site-config';
@@ -18,7 +19,7 @@ import type { TReview } from '../data/site-config';
 const posts = (await getCollection('blog')).sort(sortItemsByDateDesc);
 const featuredPosts = posts.filter(({ data }) => data.isFeatured);
 
-const projects = (await getCollection('projects')).sort(sortItemsByDateDesc);
+const projects = (await getCollection('event')).sort(sortItemsByDateDesc);
 const featuredProjects = projects.filter(({ data }) => data.isFeatured);
 
 const {mp3Example, description, image, reviews} = siteConfig
@@ -76,5 +77,14 @@ const featuredMp3Example = mp3Example.filter(( data: TMp3Example ) => data.isFea
         <div class="mt-12 sm:mt-16">
             <Button href="/reviews">Všechny recenze</Button>
         </div>
+    </div>
+
+    <div class="mb-16 sm:mb-24">
+        <h2 class="mb-12 text-xl font-serif italic sm:mb-16 sm:text-2xl">Cena</h2>
+      
+        <div class="grid grid-cols-1 md:grid-cols-2 ">
+            <Pricing />
+          </div>
+        
     </div>
 </BaseLayout>
