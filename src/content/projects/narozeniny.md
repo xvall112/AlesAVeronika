@@ -10,7 +10,7 @@ seo:
 
 <img src="/project/birthday.jpeg" alt="Svatba" style="width: 100%;">
 
-Každá oslava by měla být nezapomenutelná, plná radosti, smíchu a skvělé hudby. [Název Skupiny] je tu, aby vaše oslavy povýšila na další úroveň a zajistila, že se hosté budou bavit od začátku až do konce.
+Každá oslava by měla být nezapomenutelná, plná radosti, smíchu a skvělé hudby. Jsme tu, aby vaše oslavy povýšila na další úroveň a zajistila, že se hosté budou bavit od začátku až do konce.
 
 ## Proč si vybrat nás?
 

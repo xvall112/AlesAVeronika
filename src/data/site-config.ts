@@ -60,7 +60,7 @@ const siteConfig: SiteConfig = {
     description: 'HUDBA NA SVATBU, OSLAVU, ZÁBAVU, FIREMNÍ AKCI, SILVESTRA A JINOU PŘÍLEŽITOST NOVĚ TAKÉ PRO DĚTI...',
     image: {
         src: '/heroPhoto.jpeg',
-        alt: 'Dante - Astro.js and Tailwind CSS theme'
+        alt: 'Ales a Veronika'
     },
     headerNavLinks: [
         {

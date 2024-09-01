@@ -11,7 +11,7 @@ seo:
 
 <img src="/project/weeding.jpeg" alt="Svatba" style="width: 100%;">
 
-Svatba je jedním z nejdůležitějších okamžiků ve vašem životě. My v [Název Skupiny] rozumíme, jak důležité je, aby tento den byl nezapomenutelný a plný emocí. Naše hudba je vytvořena právě pro takové okamžiky.
+Svatba je jedním z nejdůležitějších okamžiků ve vašem životě. My rozumíme, jak důležité je, aby tento den byl nezapomenutelný a plný emocí. Naše hudba je vytvořena právě pro takové okamžiky.
 
 ## Proč si vybrat nás?
 

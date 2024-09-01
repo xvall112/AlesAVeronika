@@ -9,7 +9,7 @@ seo:
 
 <img src="/project/events.jpeg" alt="Project preview" style="width: 100%;">
 
-Chystáte zábavu a hledáte kapelu, která rozproudí náladu a postará se o plný parket? [Název Skupiny] je tu, aby vaše zábava byla nezapomenutelná a plná energie od prvního tónu až po poslední tanec.
+Chystáte zábavu a hledáte kapelu, která rozproudí náladu a postará se o plný parket? Jsme tu, aby vaše zábava byla nezapomenutelná a plná energie od prvního tónu až po poslední tanec.
 
 ## Proč si vybrat nás?
 

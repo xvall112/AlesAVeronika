@@ -10,7 +10,7 @@ seo:
 
 <img src="/project/company.jpeg" alt="company" style="width: 100%;">
 
-Úspěšná firemní akce potřebuje dokonalou atmosféru, a právě hudba hraje klíčovou roli při jejím vytváření. [Název Skupiny] je tu, aby vaše událost byla nejen profesionální, ale také nezapomenutelná.
+Úspěšná firemní akce potřebuje dokonalou atmosféru, a právě hudba hraje klíčovou roli při jejím vytváření. Jsme tu, aby vaše událost byla nejen profesionální, ale také nezapomenutelná.
 
 ## Proč si vybrat nás?
 
