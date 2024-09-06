@@ -81,10 +81,10 @@ const siteConfig: SiteConfig = {
         }
     ],
     footerNavLinks: [
-        {
-            text: 'O nás',
-            href: '/about'
-        },
+        // {
+        //     text: 'O nás',
+        //     href: '/about'
+        // },
         {
             text: 'Kontakt',
             href: '/contact'
